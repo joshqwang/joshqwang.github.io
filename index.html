@@ -2,8 +2,8 @@
 <html>
 <body>
 
-<h1>Substat probability calculator</h1>
-<h6>Put in 0 if the artifact does not have the crit stat</h6>
+<h1>Substat probability calculator (For level 0 artifacts)</h1>
+<h2>Put in 0 if the artifact does not have the crit stat</h6>
 <label for="cd">Crit damage:</label>
 <input type="text" id="cd" name="cd"><br><br>
 <label for="cr">Crit rate:</label>
@@ -67,12 +67,16 @@ function findProb(){
     if(cr > 0){critSubs++;}
 
     if(subs == 4){
-        if(critSubs == 1){
-            return compute(adjusted_target, 8.25, 6.441);
-        }
         if(critSubs == 2){
             return compute(adjusted_target, 16.5, 7.4666);
         }
+        if(critSubs == 1){
+            return compute(adjusted_target, 8.25, 6.441);
+        }
+        if(critSubs == 0){
+            return 0;
+        }
+
     }
     if(subs == 3){
         if(critSubs == 2){
