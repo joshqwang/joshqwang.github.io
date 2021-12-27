@@ -97,6 +97,9 @@ function findProb(){
 function updateText(){
     var prob = findProb();
     if(prob < .0001){prob = "In your dreams";}
+    else{
+        prob = (prob * 100).toFixed(2) + "%";
+    }
     document.getElementById("calc").innerHTML = prob;
 }
 </script>
