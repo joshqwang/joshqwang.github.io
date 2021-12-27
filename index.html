@@ -49,10 +49,10 @@ function compute(Z, M, SD) {
 }
 
 function findProb(){
-    var cd = parseInt(document.getElementById("cd").value);
+    var cd = parseFloat(document.getElementById("cd").value);
     var subs = parseInt(document.getElementById("substat").value);
-    var cr = parseInt(document.getElementById("cr").value);
-    var target = parseInt(document.getElementById("target").value);  
+    var cr = parseFloat(document.getElementById("cr").value);
+    var target = parseFloat(document.getElementById("target").value);  
     var critSubs = 0; 
     
     var currCv = cd + 2 * cr;
